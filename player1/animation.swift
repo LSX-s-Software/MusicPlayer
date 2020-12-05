@@ -29,9 +29,18 @@ extension ViewController{
         
     }
     
+    func hideAnimation(theView: UIView,toValue: Array<Any>){
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        animation.toValue = toValue
+        animation.duration = 0.8
+        animation.autoreverses = false
+        theView.layer.add(animation, forKey: "hideAnimation")
+    }
+    
     //模糊效果
     func blurEffect(theView:UIImageView){
-        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffect = UIBlurEffect(style: .regular)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = self.view.frame
         theView.addSubview(blurView)

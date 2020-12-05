@@ -17,9 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var animationImageView: UIImageView!
     @IBOutlet weak var playImageView: UIImageView!
+    @IBOutlet weak var tableView1: UITableView!
+    @IBOutlet weak var controlView: UIVisualEffectView!
+    
     var isPlayed:Bool = false
     var audioPlayer:AVPlayer?
     var playerItem:AVPlayerItem?
+    var listShown = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,5 +64,18 @@ class ViewController: UIViewController {
         }
         isPlayed.toggle()
     }
+    
+    @IBAction func showList(_ sender: Any) {
+        let frame = tableView1.frame
+        if listShown {
+//            tableView1.frame = CGRect(x: frame.minX, y: view.frame.maxY, width: frame.width, height: frame.height)
+            hideAnimation(theView: tableView1, toValue: [frame.minX, view.frame.maxY])
+        } else {
+//            tableView1.frame = CGRect(x: frame.minX, y: controlView.frame.minY - frame.height, width: frame.width, height: frame.height)
+            hideAnimation(theView: tableView1, toValue: [frame.minX, controlView.frame.minY - frame.height])
+        }
+        listShown = !listShown
+    }
+    
 }
 

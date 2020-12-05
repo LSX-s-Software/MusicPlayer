@@ -103,13 +103,13 @@
 		10125B192426241000C1C74C /* player1 */ = {
 			isa = PBXGroup;
 			children = (
+				10125B4C2426324D00C1C74C /* 1.mp3 */,
 				10125B1A2426241000C1C74C /* AppDelegate.swift */,
 				10125B1C2426241000C1C74C /* SceneDelegate.swift */,
 				10125B1E2426241000C1C74C /* ViewController.swift */,
 				10125B4A242624A300C1C74C /* animation.swift */,
 				10125B202426241000C1C74C /* Main.storyboard */,
 				10125B232426241400C1C74C /* Assets.xcassets */,
-				10125B4C2426324D00C1C74C /* 1.mp3 */,
 				10125B252426241400C1C74C /* LaunchScreen.storyboard */,
 				10125B282426241400C1C74C /* Info.plist */,
 			);
